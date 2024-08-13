@@ -1,0 +1,38 @@
+.btn {
+  background-color: $color-white;
+  padding: 1.75rem 2.438rem;
+  border: 1px solid $color-primary;
+  border-radius: 1rem;
+  width: fit-content;
+  gap: 0.625rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: $color-primary;
+  font-size: toRem(20);
+  line-height: toRem(23.44);
+  font-weight: 700;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__content {
+    display: flex;
+    gap: toRem(10);
+    align-items: center;
+    &-icon {
+      @include icon;
+      svg {
+        @include center;
+      }
+    }
+  }
+  &-dark {
+    @include btn-dark;
+  }
+  &-tertiary {
+    @include btn-tertiary;
+    &:hover {
+      background-color: var(--fs-color-secondary-dark);
+    }
+  }
+}

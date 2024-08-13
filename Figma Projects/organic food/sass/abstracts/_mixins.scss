@@ -1,0 +1,70 @@
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+}
+@mixin heading {
+  font-family: var(--fs-font-secondary);
+  color: var(--fs-color-primary);
+  font-weight: 800;
+}
+@mixin btn-dark {
+  background-color: $color-primary;
+  p {
+    color: $color-white;
+  }
+  &:hover {
+    background-color: $color-primary-2;
+  }
+  &:hover > .btn__content > .btn__content-icon {
+    background-color: var(--fs-color-primary);
+  }
+  &-icon {
+    background-color: var(--fs-color-primary-2);
+  }
+}
+@mixin icon {
+  width: 1.188rem;
+  height: 1.188rem;
+  background-color: var(--fs-color-primary-2);
+  border-radius: 100px;
+  position: relative;
+}
+@mixin btn-tertiary {
+  background-color: var(--fs-color-secondary);
+  border: none;
+}
+@mixin respond($breakpoint) {
+  @if $breakpoint == "phone-sm" {
+    @media screen and (max-width: 400px) {
+      @content;
+    }
+  }
+  @if $breakpoint == "phone" {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "tab-port" {
+    @media screen and (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "tab-land" {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+}

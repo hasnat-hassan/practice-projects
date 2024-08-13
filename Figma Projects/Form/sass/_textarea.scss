@@ -1,0 +1,26 @@
+.form {
+  &__input {
+    max-width: 27rem;
+    max-height: 9.375rem;
+    outline: $box-border;
+    border: none;
+    padding: 0.75rem 0.938rem;
+    border-radius: 8px;
+    appearance: none;
+    &:focus-visible:not(:hover) {
+      outline: 1px solid $btn-color;
+      border: none;
+    }
+    &:hover {
+      outline: 1px solid $color-grey-light-1;
+    }
+    &.disabled {
+      background-color: $color-grey-light-2;
+      outline: none;
+    }
+    // &:not(:hover)
+  }
+  &__paragraph {
+    text-align: right;
+  }
+}

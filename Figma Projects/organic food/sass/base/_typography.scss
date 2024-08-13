@@ -1,0 +1,82 @@
+.heading {
+  &-1 {
+    font-size: toRem(70);
+    line-height: toRem(82.3);
+
+    @include heading;
+  }
+  &-2 {
+    font-size: toRem(50);
+    line-height: toRem(58.59);
+    @include heading;
+  }
+  &-3 {
+    font-size: toRem(40);
+    line-height: toRem(46.88);
+    @include heading;
+  }
+  &-4 {
+    font-size: toRem(35);
+    line-height: toRem(41.2);
+    @include heading;
+  }
+  &-5 {
+    font-size: toRem(30);
+    line-height: toRem(35.16);
+    @include heading;
+  }
+  &-6 {
+    font-size: toRem(25);
+    line-height: toRem(29.3);
+    @include heading;
+  }
+}
+.yellowtail {
+  font-family: "Yellowtail", sans-serif;
+  font-size: toRem(36);
+  font-weight: 400;
+  line-height: toRem(49.06);
+}
+.paragraph {
+  font-size: toRem(20);
+  font-weight: 400;
+  line-height: toRem(29.77);
+}
+.text-primary {
+  font-size: toRem(18);
+  color: var(--fs-color-primary);
+  font-weight: 700;
+  line-height: toRem(21.9);
+}
+.text {
+  color: inherit;
+  font-size: toRem(18);
+  font-weight: 400;
+  line-height: toRem(29.7);
+}
+.text-2 {
+  font-family: "Roboto", sans-serif;
+  font-size: toRem(20);
+  font-weight: 600;
+  line-height: toRem(23.44);
+  color: var(--fs-color-primary);
+}
+.quotes {
+  max-width: 58.5rem;
+  text-align: center;
+  padding: toRem(69) toRem(59);
+  border-radius: toRem(30);
+  background-color: var(--fs-color-grey-light-3);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: toRem(1400);
+
+  @include respond(phone) {
+    padding: 0 25px;
+  }
+}
+.container-2 {
+  width: 100%;
+}

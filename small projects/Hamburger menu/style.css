@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.menu-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  bottom: -10px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #f4f4f4;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+#menu-toggle:checked~.menu {
+  right: 0;
+}

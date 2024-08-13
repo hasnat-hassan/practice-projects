@@ -1,0 +1,43 @@
+$color-primary: #274c5b;
+$color-primary-2: #335b6b;
+$color-primary-light: #7eb693;
+$color-secondary: #efd372;
+$color-secondary-dark: #f7cf4c;
+$color-grey-light-1: #d4d4d4;
+$color-grey-light-2: #eef6f1;
+$color-grey-light-3: #f1edea;
+$color-grey-light-4: #ababab;
+$color-grey-light-5: #fafafa;
+$color-grey-light-6: #e0e0e0;
+$color-grey-light-7: #f1f1f1;
+$color-white: #f9f8f8;
+$color-grey-dark: #525c60;
+
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+
+$weight-400: 400;
+$weight-500: 500;
+$weight-700: 700;
+
+$colors: (
+  "color-primary": $color-primary,
+  "color-primary-2": $color-primary-2,
+  "color-primary-light": $color-primary-light,
+  "color-secondary": $color-secondary,
+  "color-secondary-dark": $color-secondary-dark,
+  "color-grey-light-1": $color-grey-light-1,
+  "color-grey-light-2": $color-grey-light-2,
+  "color-grey-light-3": $color-grey-light-3,
+  "color-grey-light-4": $color-grey-light-4,
+  "color-grey-light-5": $color-grey-light-5,
+  "color-grey-light-6": $color-grey-light-6,
+  "color-white": $color-white,
+  "color-grey-dark": $color-grey-dark,
+  "font-primary": $font-primary,
+  "font-secondary": $font-secondary,
+
+  "weight-400": $weight-400,
+  "weight-500": $weight-500,
+  "weight-700": $weight-700,
+) !default;

@@ -1,0 +1,21 @@
+.white {
+  color: #fff;
+}
+.green {
+  color: var(--fs-color-primary-light);
+}
+.line {
+  color: var(--fs-color-grey-light-1);
+}
+.mg-md {
+  margin-left: toRem(44);
+}
+.weight-400 {
+  font-weight: var(--fs-weight-400) !important;
+}
+.weight-500 {
+  font-weight: var(--fs-weight-400) !important;
+}
+.weight-700 {
+  font-weight: var(--fs-weight-700) !important;
+}

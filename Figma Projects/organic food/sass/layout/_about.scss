@@ -1,0 +1,62 @@
+.about {
+  background-color: var(--fs-color-white);
+  height: toRem(1067);
+  margin-top: toRem(190);
+  padding-top: toRem(186);
+  padding-bottom: toRem(199);
+  @include respond(phone) {
+    flex-direction: column;
+    height: max-content;
+  }
+  @include respond(phone-sm) {
+    padding: 0 toRem(25);
+    padding-bottom: toRem(199);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(phone) {
+      flex-direction: column;
+    }
+    &--img {
+      max-width: toRem(911);
+      height: toRem(867);
+      @include respond(phone-sm) {
+        height: fit-content;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(46);
+      @include respond(phone-sm) {
+        width: fit-content;
+      }
+      .card__text {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(14);
+      }
+      .points {
+        @include flex;
+        gap: toRem(30);
+        &__content {
+          display: flex;
+          gap: toRem(19);
+          &--img {
+            width: toRem(100);
+            height: toRem(100);
+            background-color: #fff;
+            border-radius: toRem(20);
+            @include center-flex;
+          }
+        }
+      }
+    }
+  }
+}

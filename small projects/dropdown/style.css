@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  list-style: none;
+  background: orangered;
+  overflow: hidden;
+  display: flex;
+}
+
+.navbar li {
+  margin: 10px;
+}
+
+.navbar li a,
+.dropbtn {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+
+.navbar li a:hover {
+  background-color: tan;
+  color: black;
+}
+
+.dropdown li {
+  display: inline-block;
+}
+
+.dropmenu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background-color: aquamarine;
+  max-width: 160px;
+  z-index: 1;
+  transition: all .3s;
+}
+
+.dropmenu a {
+  display: block;
+  color: black;
+  padding: 4px 12px;
+  text-align: center;
+}
+
+.dropdown:hover .dropmenu {
+  opacity: 1;
+  visibility: visible;
+}

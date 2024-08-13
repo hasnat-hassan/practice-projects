@@ -1,0 +1,43 @@
+.newslatter {
+  &__cover {
+    background-image: url(/img/newslatter.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: toRem(105) toRem(71);
+    border-radius: toRem(40);
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include respond(phone) {
+        flex-direction: column;
+      }
+      &-button {
+        display: flex;
+        gap: toRem(6);
+      }
+      &-heading {
+        width: toRem(357);
+      }
+    }
+  }
+  &__input {
+    width: toRem(349);
+    height: 5rem;
+    border-radius: toRem(16);
+    border: none;
+    padding-left: toRem(23);
+    font-size: toRem(20);
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      font-size: toRem(20);
+      font-style: italic;
+      font-weight: 400;
+      line-height: toRem(21.9);
+      color: var(--fs-color-grey-light-4);
+    }
+  }
+}

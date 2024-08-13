@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Form validation</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Create Account</h2>
+      <p>Create your account in a second to receive our latest news!</p>
+      <form class="form">
+        <div class="step " id="name">
+          <div class="field">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" placeholder="Enter Your firstname">
+            <span></span>
+          </div>
+          <div class="field">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" placeholder="Enter Your Lastname">
+            <span></span>
+          </div>
+        </div>
+        <div class="step hide" id="phone">
+          <div class="field">
+            <label for="mobile">Enter Your Phone Number</label>
+            <input type="tel" placeholder="Enter Your Phone Number" id="mobile">
+            <span></span>
+          </div>
+          <div class="field">
+            <label for="email">Enter Your E-mail</label>
+            <input type="email" id="email" placeholder="Enter Your E-mail Address">
+            <span></span>
+          </div>
+        </div>
+        <div class="step hide" id="security">
+          <div class="field">
+            <label for="password">Enter password</label>
+            <input type="password" placeholder="Enter Password" id="password">
+            <span></span>
+          </div>
+          <div class="field">
+            <label for="copassword">Enter Confirm password</label>
+            <input type="password" placeholder="Enter Confirm Password" id="copassword">
+            <span></span>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="btn" id="prev" disabled>Prev</button>
+          <button class="btn" id="next">Next</button>
+          <button class="btn hide" id="submit" value="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

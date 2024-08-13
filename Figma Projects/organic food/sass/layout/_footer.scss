@@ -1,0 +1,84 @@
+.footer {
+  padding-top: toRem(117);
+  &__cover {
+    display: flex;
+    justify-content: space-between;
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: toRem(64);
+    }
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(32);
+      text-align: right;
+      max-width: toRem(285);
+      width: 100%;
+      @include respond(phone) {
+        text-align: center;
+      }
+      &-email {
+        @include flex;
+      }
+      &-phone {
+        @include flex;
+      }
+      &-address {
+        @include flex;
+      }
+    }
+    &--social {
+      @include flex;
+      align-items: center;
+      text-align: center;
+      gap: toRem(30);
+      max-width: toRem(543);
+      width: 100%;
+      position: relative;
+      border-right: 1px solid var(--fs-color-grey-light-1);
+      padding-right: toREm(41);
+      border-left: 1px solid var(--fs-color-grey-light-1);
+      padding-left: toREm(41);
+      .social__links {
+        display: flex;
+        gap: toRem(15);
+        a {
+          display: flex;
+          position: static;
+          background-color: #eef6f1;
+        }
+      }
+      @include respond(phone) {
+        border: none;
+      }
+    }
+    &--pages {
+      max-width: toRem(285);
+      width: 100%;
+      gap: toRem(24);
+      @include flex;
+      &-link {
+        list-style: none;
+        a {
+          font-family: var(--fs-font-primary);
+          color: inherit;
+          font-size: toRem(18);
+          font-weight: 400;
+          line-height: toRem(49.12);
+        }
+      }
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+  }
+  .copyright {
+    margin-top: 5rem;
+    border-top: 1px solid var(--fs-color-grey-light-1);
+    text-align: center;
+    padding-top: toRem(20);
+    font-size: toRem(18);
+  }
+}

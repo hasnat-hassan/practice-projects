@@ -1,0 +1,16 @@
+$color-primary: orangered;
+$color-secondary: white;
+$grey-light-1: #b8b8b8;
+$grey-light-2: #ddd;
+$grey-light-3: #333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: $grey-light-3;
+}
+ul {
+  list-style: none;
+}

@@ -1,0 +1,144 @@
+.checkboxes {
+  width: 9.37rem;
+  &__checkbox {
+    margin-bottom: 10px;
+    &--input {
+      display: none;
+    }
+    &--label {
+      cursor: pointer;
+      display: inline-flex;
+      gap: 0.625rem;
+      &--box {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        position: relative;
+        border-radius: 7px;
+        border: $box-border;
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: none;
+        }
+        &:hover {
+          border: 1px solid $btn-color;
+        }
+        &:focus {
+          box-shadow: $box-shadow;
+        }
+      }
+      .disabled {
+        background-color: $color-grey-light-2;
+        border: 1px solid $color-grey-light-3;
+        cursor: default;
+      }
+    }
+    &--input:checked ~ &--label > &--label--box {
+      border: none;
+      background-color: $btn-color;
+      svg {
+        display: block;
+      }
+      &:focus {
+        box-shadow: $box-shadow;
+      }
+    }
+    &--input:checked ~ &--label {
+      color: $btn-color;
+    }
+  }
+}
+.button {
+  list-style: none;
+
+  &__radio {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &--input {
+      display: none;
+    }
+    &--label {
+      cursor: pointer;
+      display: inline-flex;
+      gap: 0.8rem;
+      &--btn {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: $box-border;
+        display: block;
+        border-radius: 100px;
+        position: relative;
+        &:hover {
+          border: 1px solid $btn-color;
+        }
+        &:focus {
+          box-shadow: $box-shadow;
+        }
+        &::after {
+          content: "";
+          width: 0.813rem;
+          height: 0.813rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #fff;
+          opacity: 0;
+          border: 5px solid $btn-color;
+          transition: all 0.3s;
+        }
+      }
+    }
+    &--input:checked ~ &--label > &--label--btn::after {
+      background-color: white;
+      opacity: 1;
+      &:focus {
+        box-shadow: $box-shadow;
+      }
+    }
+    &--input:checked ~ &--label {
+      color: $btn-color;
+    }
+  }
+}
+.toggle {
+  &__button {
+    &--input {
+      display: none;
+    }
+    &--label {
+      width: 2.625rem;
+      height: 1.5rem;
+      background-color: $color-grey-light-2;
+      border-radius: 24px;
+      display: block;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        width: 1.125rem;
+        height: 1.125rem;
+        display: block;
+        background-color: #fff;
+        border-radius: 100px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        transition: all 0.2s linear;
+      }
+    }
+    &--input:checked ~ &--label {
+      background-color: $btn-color;
+      transition: all 0.2s linear;
+      &::after {
+        transform: translateX(1.125rem);
+      }
+    }
+  }
+}

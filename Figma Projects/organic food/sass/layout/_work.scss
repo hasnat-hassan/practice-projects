@@ -1,0 +1,31 @@
+.work {
+  height: 931px;
+  background-image: url(/img/work.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding: toRem(100) toRem(259) toRem(108) toRem(871);
+  @include respond(tab-land) {
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  @include respond(phone) {
+    padding: 0 toRem(25);
+  }
+  &__content {
+    max-width: toRem(789);
+    background-color: #fff;
+    padding: toRem(78) toRem(89);
+    border-radius: toRem(40);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(35);
+    &--points {
+      display: flex;
+      flex-direction: column;
+      gap: toRem(35);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+:root {
+  @each $color, $value in $colors {
+    --fs-#{$color}: #{$value};
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html {
+  /*******/
+  @include respond(tab-land) {
+    font-size: 75%;
+  }
+  @include respond(phone-sm) {
+    font-size: 56.25%;
+  }
+  // @include respond(big-desktop) {
+  //   font-size: 100%;
+  // }
+}
+body {
+  font-family: var(--fs-font-primary);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--fs-color-grey-dark);
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}

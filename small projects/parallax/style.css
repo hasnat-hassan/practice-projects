@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bruno Ace SC", sans-serif;
+}
+
+.parallax {
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-1 {
+  background-image: url(https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.parallax-2 {
+  background-image: url(https://plus.unsplash.com/premium_photo-1668456012219-e3299fd0307e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.parallax-3 {
+  background-image: url(https://images.unsplash.com/photo-1494625927555-6ec4433b1571?q=80&w=1474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.heading-1 {
+  font-size: 7rem;
+  color: #fff;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding: 1.5rem;
+}

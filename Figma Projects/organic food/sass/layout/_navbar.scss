@@ -1,0 +1,208 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: toRem(16);
+  width: 100%;
+  max-width: toRem(1595);
+  padding: toRem(69) 0;
+  margin: 0 auto;
+  @include respond(phone-sm) {
+    flex-direction: column;
+  }
+  &__logo {
+    @include center-flex;
+    gap: toRem(8.21);
+    img {
+      width: toRem(36);
+      height: toRem(56);
+    }
+  }
+  &__links {
+    transition: all 1s;
+
+    &--list {
+      list-style: none;
+      display: flex;
+      gap: toRem(32);
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: $color-primary;
+        font-family: $font-secondary;
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.465rem;
+        display: flex;
+        gap: 10px;
+      }
+      a:hover,
+      a:active {
+        color: var(--fs-color-primary-light-2);
+      }
+      @include respond(phone) {
+        & {
+          @include center-flex;
+          flex-direction: column;
+          transition: all 0.3s;
+          height: 100vh;
+        }
+        a:link,
+        a:visited {
+          line-height: normal;
+          color: #fff;
+          font-size: 3rem;
+          transition: all 0.2s;
+          border-radius: 5px;
+          padding: toRem(10);
+        }
+        a:hover,
+        a:active {
+          background-color: white;
+          color: var(--fs-color-primary-light-2);
+        }
+      }
+    }
+    @include respond(phone) {
+      & {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    &--search {
+      max-width: toRem(376);
+      width: 100%;
+      flex: 1;
+      height: toRem(66);
+      @include center-flex;
+      border-radius: 2.25rem;
+      background-color: var(--fs-color-grey-light-5);
+      position: relative;
+      border: none;
+      padding: 0 toRem(35) 0 toRem(20);
+      font-size: 1.125rem;
+      appearance: none;
+      a {
+        display: flex;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+      &-svg {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 100px;
+        background-color: var(--fs-color-primary-light);
+        position: absolute;
+        right: toRem(5);
+        svg {
+          @include respond(phone-sm) {
+            width: 18px;
+          }
+        }
+      }
+    }
+    &--shop {
+      width: toRem(159);
+      border: 1px solid var(--fs-color-grey-light-6);
+      border-radius: toRem(33);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: toRem(12);
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: var(--fs-color-primary-light);
+      }
+    }
+    .dark {
+      background-color: $color-primary;
+      left: 5px;
+      a {
+        display: flex;
+      }
+    }
+  }
+
+  //////////////Hamburger menu///////////////////
+  #nav-toggle {
+    display: none;
+  }
+  .nav-icon {
+    display: none;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    background-color: var(--fs-color-primary-light);
+    border-radius: 5px;
+    @include respond(phone) {
+      & {
+        display: block;
+      }
+    }
+    .hamburger {
+      width: 30px;
+      height: 4px;
+      background-color: var(--fs-color-white);
+      @include center;
+      transition: all 0.2s;
+      &::before,
+      &::after {
+        content: "";
+        width: 30px;
+        height: 4px;
+        background-color: inherit;
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+  #nav-toggle:checked ~ .navbar__links {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #335b6b;
+    z-index: 500;
+    top: 0;
+    left: 0;
+  }
+  #nav-toggle:checked ~ .nav-icon > .hamburger::after {
+    opacity: 0;
+  }
+
+  #nav-toggle:checked ~ .nav-icon > .hamburger::before {
+    transform: rotate(99deg);
+    top: 0;
+  }
+
+  #nav-toggle:checked ~ .nav-icon > .hamburger {
+    transform: rotate(-51deg);
+    top: 45%;
+    left: 15%;
+  }
+}

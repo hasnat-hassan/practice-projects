@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222222;
+  color: #555555;
+  font-family: 'Lato', sans-serif;
+}
+
+.heading-1 {
+  text-align: center;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+
+  &:hover {
+    color: white;
+  }
+}
+
+ul {
+  width: 500px;
+  list-style: none;
+}
+
+ul li {
+  color: #AAAAAA;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+
+  label {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.container {
+  margin: 20px auto;
+}
+
+.radio-btn {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #aaa;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+
+  &:hover {
+    border: 5px solid white;
+  }
+
+  &::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    opacity: 0;
+    transition: all .3s;
+  }
+}
+
+input:checked+label .radio-btn::after {
+  opacity: 1;
+  background-color: lightgreen;
+}
+
+input:checked+label .radio-btn {
+  border: 5px solid lightgreen;
+}
+
+input:checked+label {
+  color: lightgreen;
+}

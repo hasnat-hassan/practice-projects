@@ -1,0 +1,62 @@
+.container {
+  background-color: #b8b8b8;
+  width: 500px;
+  margin: 0 auto;
+  label:hover {
+    span {
+      background-color: orangered;
+    }
+  }
+
+  .Checkboxes {
+    margin: 20px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input {
+    display: none;
+  }
+
+  span {
+    background-color: white;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-top;
+    margin-right: 10px;
+    position: relative;
+
+    .icon {
+      color: #fff;
+      font-size: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+  }
+
+  #dislabled + label {
+    color: #777272;
+    &:hover {
+      cursor: default;
+    }
+    > span {
+      background-color: $grey-light-2;
+    }
+  }
+
+  input:checked + label {
+    > span {
+      background-color: orangered;
+
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+}

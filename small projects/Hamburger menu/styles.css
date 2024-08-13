@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.menu-icon {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .2s;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger::before {
+  top: -10px;
+}
+
+.hamburger::after {
+  bottom: -10px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu {
+  width: 250px;
+  height: 100vh;
+  background-color: red;
+  transition: all 0.3s ease;
+  z-index: 999;
+  opacity: 0;
+}
+
+.menu-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item li {
+  padding: 15px;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.menu-item li:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.menu-item li:hover {
+  background-color: white;
+  border-radius: 4px;
+}
+
+.menu-item li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 3rem;
+  width: 40px;
+  height: 40px;
+}
+
+#menu-toggle:checked~.menu {
+  opacity: 1;
+  width: 100%;
+}
+
+#menu-toggle:checked~.menu-icon>.hamburger::after {
+  opacity: 0;
+}
+
+#menu-toggle:checked~.menu-icon>.hamburger::before {
+  transform: rotate(99deg);
+  top: 0;
+}
+
+#menu-toggle:checked~.menu-icon>.hamburger {
+  transform: rotate(-44deg);
+}

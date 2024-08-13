@@ -1,0 +1,72 @@
+.btn-cover {
+  width: 250px;
+  background-color: antiquewhite;
+  height: 150px;
+  margin: 30vh auto;
+
+  position: relative;
+}
+
+#toggle-btn {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  // transform: translateX(40px);
+}
+
+.toggle-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .toggle {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    background-color: cadetblue;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+
+    .btn {
+      background-color: $color-secondary;
+      height: 35px;
+      width: 35px;
+      border-radius: 100px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translate(-50%, -50%);
+      transition: 0.7s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+
+      &.light {
+        background-color: white;
+        opacity: 0;
+        transform: translate(120%, -50%);
+      }
+    }
+  }
+
+  #toggle-btn:checked ~ .toggle .btn {
+    transition: 0.7s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+
+    &.dark {
+      opacity: 0;
+      background-color: #fff;
+    }
+
+    &.light {
+      opacity: 1;
+    }
+  }
+}

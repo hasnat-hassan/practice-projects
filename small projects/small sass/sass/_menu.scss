@@ -1,0 +1,108 @@
+.menu-container {
+  .menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    .hamburger {
+      width: 30px;
+      height: 4px;
+      background-color: $grey-light-3;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 0.2s ease-in;
+      &::before,
+      &::after {
+        content: "";
+        width: 30px;
+        height: 4px;
+        background-color: $grey-light-3;
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        bottom: -10px;
+      }
+    }
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu {
+    height: 100vh;
+    position: fixed;
+    background-color: red;
+    transition: all 0.3s ease;
+    z-index: 999;
+    /* top: 0; */
+    opacity: 0;
+    /* left: 0; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__item {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: none;
+      transform: translate(-50%, -50%);
+      &--list {
+        padding: 15px;
+        transition: all 0.3s;
+        cursor: pointer;
+        text-align: center;
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+        &:hover {
+          background-color: white;
+          border-radius: 4px;
+        }
+        a {
+          text-decoration: none;
+          color: $grey-light-3;
+          font-size: 3rem;
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  #menu-toggle:checked ~ .menu {
+    opacity: 1;
+    width: 100%;
+  }
+  #menu-toggle:checked ~ .menu > .menu__item {
+    display: inline-block;
+  }
+
+  #menu-toggle:checked ~ .menu-icon > .hamburger::after {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-icon > .hamburger::before {
+    transform: rotate(99deg);
+    top: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-icon > .hamburger {
+    transform: rotate(-44deg);
+  }
+}

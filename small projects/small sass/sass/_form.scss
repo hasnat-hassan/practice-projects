@@ -1,0 +1,73 @@
+.form-container {
+  background-color: #1c1c33;
+  color: $color-secondary;
+  font-size: 1.3rem;
+  height: 1250px;
+  h1,
+  p {
+    margin: 1em auto;
+    text-align: center;
+  }
+
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+  }
+
+  fieldset:not(:last-of-type) {
+    border-bottom: 2px solid #a7a6a638;
+  }
+
+  .form {
+    width: 800px;
+    height: 70vh;
+    margin: 0 auto;
+  }
+
+  .label {
+    color: $color-secondary;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+  }
+
+  input,
+  textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: $color-secondary;
+  }
+
+  .radio-btn {
+    width: unset;
+    margin: 0 0.5rem 0 0;
+  }
+
+  .conditon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #select {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  textarea {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .submit {
+    display: block;
+    width: 50%;
+    background-color: #3b3b4f;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

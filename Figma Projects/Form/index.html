@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Forms</title>
+</head>
+
+<body>
+  <!-- ***********Button******************* -->
+  <h1 class="heading">Buttons</h1>
+  <button type="button" class="btn">Buttons</button>
+  <button type="button" class="btn__disabled" disabled>Buttons</button>
+
+  <!-- ***********Input******************* -->
+  <h1 class="heading">input</h1>
+  <form action="#" class="form" novalidate>
+
+    <!-- ******With icon******** -->
+    <div class="form__input-field">
+      <label for="email" class="form__input-field--label"><span class="text-color-2">Label</span><span
+          class="text-color-1"><em>Instructions</em></span>
+      </label>
+      <div class="form__input-field--input">
+        <input type="email" id="email" class="form__input-field--input--fieldset" placeholder="Placeholder" required>
+        <div class="form__input-field--input--icon search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.7125 14.8637L11.8882 11.0171C12.8362 9.85469 13.4075 8.36571 13.4075 6.74286C13.4075 3.02041 10.4046 0 6.70377 0C2.99965 0 0 3.02041 0 6.74286C0 10.4653 2.99965 13.4857 6.70377 13.4857C8.31722 13.4857 9.79432 12.9143 10.95 11.9608L14.7743 15.8041C15.034 16.0653 15.4528 16.0653 15.7125 15.8041C15.9722 15.5461 15.9722 15.1216 15.7125 14.8637ZM6.70377 12.1437C3.73983 12.1437 1.33101 9.72082 1.33101 6.74286C1.33101 3.7649 3.73983 1.33878 6.70377 1.33878C9.66446 1.33878 12.0765 3.7649 12.0765 6.74286C12.0765 9.72082 9.66446 12.1437 6.70377 12.1437Z"
+              fill="#AAAAAA" />
+          </svg>
+        </div>
+        <input type="reset" id="reset">
+        <label for="reset" class="form__input-field--input--icon close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.9872 2.04239C9.25728 -0.680798 4.77739 -0.680798 2.04745 2.04239C-0.682484 4.76559 -0.682484 9.23441 2.04745 11.9576C4.77739 14.6808 9.18728 14.6808 11.9172 11.9576C14.6471 9.23441 14.7171 4.76559 11.9872 2.04239ZM8.97728 9.93267L7.01733 7.97756L5.05738 9.93267L4.0774 8.95511L6.03735 7L4.0774 5.04489L5.05738 4.06733L7.01733 6.02244L8.97728 4.06733L9.95726 5.04489L7.99731 7L9.95726 8.95511L8.97728 9.93267Z"
+              fill="#AAAAAA" />
+          </svg>
+        </label>
+        <span class="form__input-field--input--error">Error message <a href=" #">learn more</a></span>
+      </div>
+    </div>
+
+    <!-- *******Without Icon********** -->
+    <div class="form__input-field">
+      <label for="email-2" class="form__input-field--label"><span class="text-color-2">Label</span><span
+          class="text-color-1"><em>Instructions</em></span>
+      </label>
+      <div class="form__input-field--input">
+        <input type="email" id="email-2" class="form__input-field--input--fieldset w-icon" placeholder="Placeholder"
+          required>
+        <span class="form__input-field--input--error">Error message <a href=" #">learn more</a></span>
+      </div>
+    </div>
+
+    <div class="form__input-field">
+      <label for="email" class="form__input-field--label"><span class="text-color-2">Label</span><span
+          class="text-color-1"><em>Instructions</em></span>
+      </label>
+      <div class="form__input-field--input">
+        <input type="email" id="text" class="form__input-field--input--fieldset-disabled" placeholder="Placeholder"
+          required disabled>
+        <div class="form__input-field--input--icon search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.7125 14.8637L11.8882 11.0171C12.8362 9.85469 13.4075 8.36571 13.4075 6.74286C13.4075 3.02041 10.4046 0 6.70377 0C2.99965 0 0 3.02041 0 6.74286C0 10.4653 2.99965 13.4857 6.70377 13.4857C8.31722 13.4857 9.79432 12.9143 10.95 11.9608L14.7743 15.8041C15.034 16.0653 15.4528 16.0653 15.7125 15.8041C15.9722 15.5461 15.9722 15.1216 15.7125 14.8637ZM6.70377 12.1437C3.73983 12.1437 1.33101 9.72082 1.33101 6.74286C1.33101 3.7649 3.73983 1.33878 6.70377 1.33878C9.66446 1.33878 12.0765 3.7649 12.0765 6.74286C12.0765 9.72082 9.66446 12.1437 6.70377 12.1437Z"
+              fill="#AAAAAA" />
+          </svg>
+        </div>
+        <div class="form__input-field--input--icon close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.9872 2.04239C9.25728 -0.680798 4.77739 -0.680798 2.04745 2.04239C-0.682484 4.76559 -0.682484 9.23441 2.04745 11.9576C4.77739 14.6808 9.18728 14.6808 11.9172 11.9576C14.6471 9.23441 14.7171 4.76559 11.9872 2.04239ZM8.97728 9.93267L7.01733 7.97756L5.05738 9.93267L4.0774 8.95511L6.03735 7L4.0774 5.04489L5.05738 4.06733L7.01733 6.02244L8.97728 4.06733L9.95726 5.04489L7.99731 7L9.95726 8.95511L8.97728 9.93267Z"
+              fill="#AAAAAA" />
+          </svg>
+        </div>
+        <span class="form__input-field--input--error">Error message <a href=" #">learn more</a></span>
+      </div>
+    </div>
+    <input type="submit" class="btn">
+  </form>
+
+  <!-- ***********Select******************* -->
+  <h1 class="heading">Select</h1>
+  <form class="form">
+    <div class="form__input-field">
+      <label for="Dropdown-1" class="form__input-field--label"><span class="text-color-2">Label</span><span
+          class="text-color-1"><em>Instructions</em></span>
+      </label>
+      <div class="form__input-field--input">
+        <select id="Dropdown-1" class="form__input-field--input--fieldset" name="content">
+          <option value="Select">Please select one</option>
+          <option value="Contact us">Contact us</option>
+          <option value="About us">About us</option>
+          <option value="Our Services">Our Services</option>
+          <option value="Home">Home</option>
+        </select>
+        <div class="form__input-field--input--icon search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.7125 14.8637L11.8882 11.0171C12.8362 9.85469 13.4075 8.36571 13.4075 6.74286C13.4075 3.02041 10.4046 0 6.70377 0C2.99965 0 0 3.02041 0 6.74286C0 10.4653 2.99965 13.4857 6.70377 13.4857C8.31722 13.4857 9.79432 12.9143 10.95 11.9608L14.7743 15.8041C15.034 16.0653 15.4528 16.0653 15.7125 15.8041C15.9722 15.5461 15.9722 15.1216 15.7125 14.8637ZM6.70377 12.1437C3.73983 12.1437 1.33101 9.72082 1.33101 6.74286C1.33101 3.7649 3.73983 1.33878 6.70377 1.33878C9.66446 1.33878 12.0765 3.7649 12.0765 6.74286C12.0765 9.72082 9.66446 12.1437 6.70377 12.1437Z"
+              fill="#AAAAAA" />
+          </svg>
+        </div>
+        <div class="form__input-field--input--icon close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.7166 5.23204C11.858 5.08339 12.049 5 12.248 5C12.4471 5 12.6381 5.08339 12.7795 5.23204C12.8493 5.30503 12.9048 5.39204 12.9427 5.48799C12.9805 5.58395 13 5.68694 13 5.79097C13 5.895 12.9805 5.99799 12.9427 6.09395C12.9048 6.18991 12.8493 6.27691 12.7795 6.34991L8.53202 10.7683C8.39026 10.9168 8.19913 11 8 11C7.80087 11 7.60974 10.9168 7.46798 10.7683L3.22049 6.34991C3.15065 6.27691 3.0952 6.18991 3.05735 6.09395C3.01949 5.99799 3 5.895 3 5.79097C3 5.68694 3.01949 5.58395 3.05735 5.48799C3.0952 5.39204 3.15065 5.30503 3.22049 5.23204C3.36192 5.08339 3.55292 5 3.75197 5C3.95101 5 4.14201 5.08339 4.28345 5.23204L8.00163 8.8556L11.7166 5.23204Z"
+              fill="#333333" />
+          </svg>
+        </div>
+        <span class="form__input-field--input--error">Error message <a href=" #">learn more</a></span>
+      </div>
+    </div>
+    <!-- ********Disabled******************************* -->
+    <div class="form__input-field">
+      <label for="email" class="form__input-field--label"><span class="text-color-2">Label</span><span
+          class="text-color-1"><em>Instructions</em></span>
+      </label>
+      <div class="form__input-field--input">
+        <select id="Dropdown-1" class="form__input-field--input--fieldset-disabled" name="content" disabled>
+          <option value="Select">Please select one</option>
+          <option value="Contact us">Contact us</option>
+          <option value="About us">About us</option>
+          <option value="Our Services">Our Services</option>
+          <option value="Home">Home</option>
+        </select>
+        <div class="form__input-field--input--icon search">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.7125 14.8637L11.8882 11.0171C12.8362 9.85469 13.4075 8.36571 13.4075 6.74286C13.4075 3.02041 10.4046 0 6.70377 0C2.99965 0 0 3.02041 0 6.74286C0 10.4653 2.99965 13.4857 6.70377 13.4857C8.31722 13.4857 9.79432 12.9143 10.95 11.9608L14.7743 15.8041C15.034 16.0653 15.4528 16.0653 15.7125 15.8041C15.9722 15.5461 15.9722 15.1216 15.7125 14.8637ZM6.70377 12.1437C3.73983 12.1437 1.33101 9.72082 1.33101 6.74286C1.33101 3.7649 3.73983 1.33878 6.70377 1.33878C9.66446 1.33878 12.0765 3.7649 12.0765 6.74286C12.0765 9.72082 9.66446 12.1437 6.70377 12.1437Z"
+              fill="#AAAAAA" />
+          </svg>
+        </div>
+        <div class="form__input-field--input--icon close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.7166 5.23204C11.858 5.08339 12.049 5 12.248 5C12.4471 5 12.6381 5.08339 12.7795 5.23204C12.8493 5.30503 12.9048 5.39204 12.9427 5.48799C12.9805 5.58395 13 5.68694 13 5.79097C13 5.895 12.9805 5.99799 12.9427 6.09395C12.9048 6.18991 12.8493 6.27691 12.7795 6.34991L8.53202 10.7683C8.39026 10.9168 8.19913 11 8 11C7.80087 11 7.60974 10.9168 7.46798 10.7683L3.22049 6.34991C3.15065 6.27691 3.0952 6.18991 3.05735 6.09395C3.01949 5.99799 3 5.895 3 5.79097C3 5.68694 3.01949 5.58395 3.05735 5.48799C3.0952 5.39204 3.15065 5.30503 3.22049 5.23204C3.36192 5.08339 3.55292 5 3.75197 5C3.95101 5 4.14201 5.08339 4.28345 5.23204L8.00163 8.8556L11.7166 5.23204Z"
+              fill="#333333" />
+          </svg>
+        </div>
+        <span class="form__input-field--input--error">Error message <a href=" #">learn more</a></span>
+      </div>
+    </div>
+  </form>
+
+  <!-- ***********Text area****************** -->
+  <h1 class="heading">textarea</h1>
+  <div class="form">
+    <label for="textarea">Label</label>
+    <textarea id="textarea" class="form__input" rows="5" cols="45" placeholder="Textarea"></textarea>
+    <p class="form__paragraph text-color-1">Max 2000 character</p>
+  </div>
+  <div class="form">
+    <label for="textarea">Label</label>
+    <textarea id="textarea" class="form__input disabled" rows="5" cols="45" placeholder="Textarea" disabled></textarea>
+    <p class="form__paragraph text-color-1">Max 2000 character</p>
+  </div>
+  <!-- ***********Checkbox****************** -->
+  <h1 class="heading">Checkboxes</h1>
+  <div class="checkboxes">
+    <div class="checkboxes__checkbox">
+      <input type="checkbox" id="check" class="checkboxes__checkbox--input">
+      <label for="check" class="checkboxes__checkbox--label">
+        <span class="checkboxes__checkbox--label--box">
+          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6656 0.9375L6.33437 10.6031L2 6.27187L0 8.27188L6.66563 14.9375L16 2.9375L13.6656 0.9375Z"
+              fill="white" />
+          </svg>
+        </span>
+      </label>
+    </div>
+
+    <div class="checkboxes__checkbox">
+      <input type="checkbox" id="disable" class="checkboxes__checkbox--input" disabled>
+      <label for="disable" class="checkboxes__checkbox--label">
+        <span class="checkboxes__checkbox--label--box disabled">
+          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6656 0.9375L6.33437 10.6031L2 6.27187L0 8.27188L6.66563 14.9375L16 2.9375L13.6656 0.9375Z"
+              fill="white" />
+          </svg>
+        </span>
+      </label>
+    </div>
+
+    <div class="checkboxes__checkbox">
+      <input type="checkbox" id="mark" class="checkboxes__checkbox--input">
+      <label for="mark" class="checkboxes__checkbox--label">
+        <span class="checkboxes__checkbox--label--box">
+          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6656 0.9375L6.33437 10.6031L2 6.27187L0 8.27188L6.66563 14.9375L16 2.9375L13.6656 0.9375Z"
+              fill="white" />
+          </svg>
+        </span>Checkbox Label
+      </label>
+    </div>
+
+    <div class="checkboxes__checkbox">
+      <input type="checkbox" id="disable" class="checkboxes__checkbox--input" disabled>
+      <label for="disable" class=" checkboxes__checkbox--label  text-color-3">
+        <span class="checkboxes__checkbox--label--box disabled">
+          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6656 0.9375L6.33437 10.6031L2 6.27187L0 8.27188L6.66563 14.9375L16 2.9375L13.6656 0.9375Z"
+              fill="white" />
+          </svg>
+        </span>Checkbox Label
+      </label>
+    </div>
+  </div>
+
+  <!-- ***********Radio Buttons****************** -->
+  <h1 class="heading">Radio Buttons</h1>
+  <ul class="button">
+    <li class="button__radio">
+      <input type="radio" id="radio" class="button__radio--input" name="radio-button">
+      <label for="radio" class="button__radio--label">
+        <span class="button__radio--label--btn">&nbsp;</span>
+      </label>
+    </li>
+    <li class="button__radio">
+      <input type="radio" id="item" class="button__radio--input" name="radio-button">
+      <label for="item" class="button__radio--label">
+        <span class="button__radio--label--btn">&nbsp;</span>Radio Button
+      </label>
+    </li>
+  </ul>
+
+  <!-- ***********Toggle button****************** -->
+  <h1 class="heading">Toggle Button</h1>
+  <div class="toggle">
+    <div class="toggle__button">
+      <input type="checkbox" name="" id="toggle" class="toggle__button--input">
+      <label for="toggle" class="toggle__button--label"></label>
+    </div>
+  </div>
+</body>
+
+</html>
